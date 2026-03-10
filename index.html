@@ -28,8 +28,8 @@
   --r2: 24px;
 }
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-html, body { height:100%; overflow:hidden; background:var(--bg); }
-body { font-family:'Barlow', sans-serif; color:var(--text); display:flex; flex-direction:column; }
+html, body { height:100%; overflow:hidden; background:var(--bg); overscroll-behavior:none; }
+body { font-family:'Barlow', sans-serif; color:var(--text); display:flex; flex-direction:column; overscroll-behavior:none; }
 
 /* NOISE OVERLAY */
 body::before {
@@ -39,7 +39,7 @@ body::before {
 }
 
 /* SCROLLABLE */
-.scroll { flex:1; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; padding-bottom:90px; }
+.scroll { flex:1; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; padding-bottom:90px; overscroll-behavior:contain; }
 .scroll::-webkit-scrollbar { display:none; }
 
 /* ── TOP BAR ── */
